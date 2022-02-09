@@ -58,6 +58,17 @@ filebeat modules disable system system
 filebeat test config
 ````
 
+## file init config `filebeat.yml`
+
+````
+filebeat.inputs:
+- type: log
+  paths:
+    - /path/to/file/logstash-tutorial.log 
+output.logstash:
+  hosts: ["localhost:5044"]
+````
+
 ## run
 
 ````
